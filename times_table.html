@@ -1,0 +1,35 @@
+<!-- <?php include '/php/times_table.php';?> -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/master.css">
+    <title>Multiplication Table</title>
+  </head>
+  <body>
+
+    <div class="header_div">
+    </div>
+    <div class="table_div">
+      <table id="multi_table">
+        <thead id="table_head">
+          <?php include 'times_table.php';?>
+          <th id="empty"></th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+        </thead>
+        <tbody id="table_body">
+          <tr>
+            <th>1</th>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
