@@ -84,12 +84,21 @@ font-family: monospace;
  color: white;
 }
 
-table, td, th {
+table {
+  text-align: center;
+  border: 1px solid white;
+  color: white;
+  width: auto;
+}
+
+td {
   text-align: center;
   border: 1px solid white;
   color: white;
 }
 
-table{
-  width: auto;
+th {
+  text-align: center;
+  border: 1px solid white;
+  color: white;
 }
