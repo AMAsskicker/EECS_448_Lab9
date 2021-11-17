@@ -34,7 +34,10 @@
   background-size: cover;
 }
 
-
+#multi_body{
+  background-image: url(../image/blue_grade.jpg);
+  background-size: auto;
+}
 
 .itl_30{
   font-size: 30px;
@@ -85,4 +88,8 @@ table, td, th {
   text-align: center;
   border: 1px solid white;
   color: white;
+}
+
+table{
+  width: auto;
 }
