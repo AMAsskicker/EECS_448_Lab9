@@ -1,21 +1,30 @@
-
-<!-- <?php
-//Inside myfirstprogram.php
-function sum($x, $y) {
-$z = $x + $y;
-return $z;
-}
-echo "5 + 10 = <b>" . sum(5, 10) . "</b><br>";
-echo "7 + 13 = <b>" . sum(7, 13) . "</b><br>";
-echo "2 + 4 = <b>" . sum(2, 4) . "</b>";
-?> -->
-
 <?php
-// function printHead {
-  for ($i=0; $i < 100; $i++) {
-    echo "<th>$i</th";
+for ($row = 0; $row  < 101; $row++) {
+  for ($col=1; $col < 101; $col++) {
+    if ($row == 0) {
+      if ($col == 1) {
+        echo "<tr>";
+        echo "<td></td>";
+        echo "<th>$col</th>";
+      } elseif ($col == 100) {
+        echo "<th>$col</th>";
+        echo "</tr>";
+      } else {
+        echo "<th>$col</th>";
+      }
+    } else {
+      $product = $row * $col;
+      if ($col == 1) {
+        echo "<tr>";
+        echo "<th>$row</th>";
+        echo "<td>$product</td>";
+      } elseif ($col == 100) {
+        echo "<td>$product</td>";
+        echo "</tr>";
+      } else {
+        echo "<td>$product</td>";
+      }
+    }
   }
-// }
-//
-// printHead()
+}
  ?>
