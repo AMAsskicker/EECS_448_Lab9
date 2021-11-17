@@ -4,7 +4,7 @@ for ($row = 0; $row  < 101; $row++) {
     if ($row == 0) {
       if ($col == 1) {
         echo "<tr>";
-        echo "<td></td>";
+        echo "<td>X</td>";
         echo "<th>$col</th>";
       } elseif ($col == 100) {
         echo "<th>$col</th>";
