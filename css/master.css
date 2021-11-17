@@ -35,8 +35,8 @@
 }
 
 #multi_body{
-  background-image: url(../image/blue_grade.jpg);
-  background-size: auto;
+  background-image: url(../image/solid_black.jpg);
+  background-size: cover;
 }
 
 .itl_30{
