@@ -2,12 +2,15 @@
   <head>
   </head>
   <body>
-    <form action="./php/quiz.php" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       Name: <input type="text" name="name"><br>
       E-mail: <input type="text" name="email"><br>
-      Question 1:
+      Question 1: What is the color of the sky?
+      <input type="radio" name="q1" value="q1_a1"> Answer 1 <br>
+      <input type="radio" name="q1" value="q1_a2"> Answer 2 <br>
 
-      <p>1: What is the color of the sky?</p>
+
+      <!-- <p>1: </p>
       <div>
         <input type="radio" name="q1_a1" value="ans1">
         <label for="ans1">Answer 1</label>
@@ -23,7 +26,7 @@
       <div>
         <input type="radio" name="q1_a4" value="ans4">
         <label for="ans4">Answer 4</label>
-      </div>
+      </div> -->
 
       <input type="submit" value="Submit Quiz">
     </form>
