@@ -2,31 +2,40 @@
   <head>
   </head>
   <body>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <form action="./php/quiz.php" method="post">
       Name: <input type="text" name="name"><br>
-      E-mail: <input type="text" name="email"><br>
-      Question 1: What is the color of the sky?
+      E-mail: <input type="text" name="email"><br><br>
+
+      Question 1: What is the color of the sky? <br>
+      <input type="radio" name="q1" value="blue"> Blue <br>
+      <input type="radio" name="q1" value="yellow"> Yellow <br>
+      <input type="radio" name="q1" value="red"> Red<br>
+      <input type="radio" name="q1" value="clear"> Clear <br><br>
+
+      Question 2: Does pineapple belong on pizza? <br>
+      <input type="radio" name="q1" value="no">NO!! <br>
+      <input type="radio" name="q1" value="yes">YES!! <br>
+      <input type="radio" name="q1" value="trick">This is a trick question<br>
+      <input type="radio" name="q1" value="like">Who cares, eat what you like!<br><br>
+
+      Question 1: What is the color of the sky? <br>
       <input type="radio" name="q1" value="q1_a1"> Answer 1 <br>
       <input type="radio" name="q1" value="q1_a2"> Answer 2 <br>
+      <input type="radio" name="q1" value="q1_a3"> Answer 3<br>
+      <input type="radio" name="q1" value="q1_a4"> Answer 4 <br><br>
 
+      Question 1: What is the color of the sky? <br>
+      <input type="radio" name="q1" value="q1_a1"> Answer 1 <br>
+      <input type="radio" name="q1" value="q1_a2"> Answer 2 <br>
+      <input type="radio" name="q1" value="q1_a3"> Answer 3<br>
+      <input type="radio" name="q1" value="q1_a4"> Answer 4 <br><br>
 
-      <!-- <p>1: </p>
-      <div>
-        <input type="radio" name="q1_a1" value="ans1">
-        <label for="ans1">Answer 1</label>
-      </div>
-      <div>
-        <input type="radio" name="q1_a2" value="ans2">
-        <label for="ans2">Answer 2</label>
-      </div>
-      <div>
-        <input type="radio" name="q1_a3" value="ans3">
-        <label for="ans3">Answer 3</label>
-      </div>
-      <div>
-        <input type="radio" name="q1_a4" value="ans4">
-        <label for="ans4">Answer 4</label>
-      </div> -->
+      Question 1: What is the color of the sky? <br>
+      <input type="radio" name="q1" value="q1_a1"> Answer 1 <br>
+      <input type="radio" name="q1" value="q1_a2"> Answer 2 <br>
+      <input type="radio" name="q1" value="q1_a3"> Answer 3<br>
+      <input type="radio" name="q1" value="q1_a4"> Answer 4 <br><br>
+
 
       <input type="submit" value="Submit Quiz">
     </form>
