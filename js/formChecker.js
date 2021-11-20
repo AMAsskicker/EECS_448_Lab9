@@ -1,54 +1,48 @@
-<?php
-// error reporting
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+//formChecker.js
+// checks that for is filled in, user is an email, password is not blank
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$ans_q1 = $_POST["q1"];
-$ans_q2 = $_POST["q2"];
-$ans_q3 = $_POST["q3"];
-$ans_q4 = $_POST["q4"];
-$ans_q5 = $_POST["q5"];
-$score = 0;
 
-echo "Name: " . $name . "<br>";
-echo "Email: " . $email . "<br><br>";
 
-echo "Question 1: What is the color of the sky? <br>";
-echo "Correct Answer: Blue <br>";
-echo "Your Answer: " . $ans_q1 . "<br><br>";
-if ($ans_q1 == "blue") {
-  $score++;
+function validateForm() {
+  let form_pass = document.forms["order_form"]["password"].value;
+  let form_email = document.forms["order_form"]["user"].value;
+  let item_1 = document.forms["order_form"]["item1"].value;
+  let item_2 = document.forms["order_form"]["item2"].value;
+  let item_3 = document.forms["order_form"]["item3"].value;
+  let ship_rad = document.getElementsByName("shipping");
+
+  if (form_pass == "") {
+    alert("PASSWORD must be filled out");
+    return false;
+  }
+  if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form_email)))
+    {
+      alert("You have entered an invalid email address!");
+      return (false);
+  }
+  if (isNaN(item_1) || item_1 == "") {
+    alert("Must enter a valid quantity for red spatula");
+    return false;
+  } else if (item_1 < 0 || item_1 > 9) {
+    alert("Must enter a valid quantity for red spatula");
+    return false;
+  }
+  if (isNaN(item_2) || item_2 == "") {
+    alert("Must enter a quantity for blue spatula");
+    return false;
+  } else if (item_2 < 0 || item_2 > 9) {
+    alert("Must enter a valid quantity for blue spatula");
+    return false;
+  }
+  if (isNaN(item_3) || item_3 == "") {
+    alert("Must enter a quantity for purple spatula");
+    return false;
+  } else if (item_3 < 0 || item_3 > 9) {
+    alert("Must enter a valid quantity for purple spatula");
+    return false;
+  }
+  if (!(ship_rad[0].checked || ship_rad[1].checked || ship_rad[2].checked)) {
+      alert("Please select the shipping ");
+      return false;
+  }
 }
-
-echo "Question 2: Does pineapple belong on pizza? <br>";
-echo "Correct Answer: Who cares, eat what you like! <br>";
-echo "Your Answer: " . $ans_q2 . "<br><br>";
-if ($ans_q2 == "Who cares, eat what you like!") {
-  $score++;
-}
-
-echo "Question 3: How fast does a fly fly? <br>";
-echo "Correct Answer: 5 MPH <br>";
-echo "Your Answer: " . $ans_q3 . "<br><br>";
-if ($ans_q3 == "5 MPH") {
-  $score++;
-}
-
-echo "Question 4: e^0 = ? <br>";
-echo "Correct Answer: 1 <br>";
-echo "Your Answer: " . $ans_q4 . "<br><br>";
-if ($ans_q4 == "1") {
-  $score++;
-}
-
-echo "Question 5: What was the original name of a Siemen unit? <br>";
-echo "Correct Answer: Mho <br>";
-echo "Your Answer: " . $ans_q5 . "<br><br>";
-if ($ans_q5 == "Mho") {
-  $score++;
-}
-
-echo "FINAL SCORE: " . $score . " of 5, " . ($score/5)*100 . "%<br><br>";
-?>
