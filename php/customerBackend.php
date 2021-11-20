@@ -6,12 +6,15 @@ ini_set("display_errors", 1);
 $user = $_POST["user"];
 $u_pass = $_POST["password"];
 $item_1 = $_POST["item1"];
+$item1_total = $item_1 * 7.99;
 $item_2 = $_POST["item2"];
+$item2_total = $item_2 * 7.89;
 $item_3 = $_POST["item3"];
+$item3_total = $item_3 * 6.99;
 $ship = $_POST["shipping"];
 $total;
 
-$subtotal = ($item_1 * 7.99) + ($item_2 * 7.89) + ($item_3 * 6.99);
+$subtotal = $item1_total + $item2_total + $item3_total;
 // if ($item_1 == "yes") {
 //   $subtotal += 7.99;
 // }
@@ -21,14 +24,12 @@ $subtotal = ($item_1 * 7.99) + ($item_2 * 7.89) + ($item_3 * 6.99);
 // if ($item_3 == "yes"){
 //   $subtotal++;
 // }
-
-
 if ($ship == "overnight") {
   $total = $subtotal + 50;
 } elseif ($ship == "three") {
-  $total = $subtotal * 7.99 + 5;
+  $total = $subtotal + 5;
 } else {
-  $total = $subtotal * 7.99;
+  $total = $subtotal;
 }
 
 echo "<html>";
@@ -41,23 +42,26 @@ echo "<body>";
 echo '<span id="user_pass">User Name: ' . $user . '</span><br>';
 echo '<span id="user_pass">Password: ' . $u_pass . '</span><br><br>';
 
-echo 'Red Spatula x '.$item_1.' =  '.$item_1 * 7.89'<br>';
-
-// echo '<span id="price">Purchase Red Spatula: '.$item_1.'</sapn><br>';
-// echo '<span id="price">Purchase Blue Spatula: '.$item_3.'</sapn><br>';
-// echo '<span id="price">Purchase Purple Spatula: '.$item_3.'</sapn><br>';
+echo '<span id="recipt">    Recipt     </span><br>';
+echo '<span id="recipt">----------</span><br>';
+echo '<span id="recipt">Red Spatula x '.$item_1.' =  '.$item1_total.'</span><br>';
+echo '<span id="recipt">Blue Spatula x '.$item_2.' =  '.$item2_total.'</span><br>';
+echo '<span id="recipt">Red Spatula x '.$item_3.' =  '.$item3_total.'</span><br>';
+echo '<span id="recipt">----------</span><br>';
+echo '<span id="recipt">SUBTOTOAL: $'.round($subtotal,2).'</span><br>';
+echo '<span id="recipt">----------</span><br>';
 
 if ($ship == "free") {
-  echo '<span id="">Shipping: Overnight = $50</span><br>';
+  echo '<span id="recipt">Shipping: Overnight = $50</span><br>';
 } elseif ("three") {
-  echo '<span id="">Shipping: Three Day = $5</span><br>';
+  echo '<span id="recipt">Shipping: Three Day = $5</span><br>';
 } else {
-  echo '<span id="">Shipping: Free 7 Day = $0</span><br>';
+  echo '<span id="Recipt">Shipping: Free 7 Day = $0</span><br>';
 }
+echo '<span id="recipt">----------</span><br>';
 
-echo '<span id="total">TOTAL: $'.$total.'</span><br>';
+echo '<span id="total">TOTAL: $'.round($total,2).'</span><br><br><br>';
 
-echo '<span>Total: $'.$total.'</span>';
 echo '<span id="footer">THANK YOU FOR YOUR PURCHASE!!</span><br>';
 echo "</body>";
 echo "</html>";
