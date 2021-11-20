@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/storeFront.css">
+  </head>
+  <body>
+    <form action="./php/customerBackend.php" method="post" class="text_center">
+      <p id="head">
+      Welcome to Spatula City's Online Store!<br>
+      Please make your selections below
+      </p>
+      <span id="user_pass">User Name:</span><input type="text" name="name">
+      <br>
+      <span id="user_pass">Password:</span><input type="text" name="pass">
+      <br>
+      <br>
+      <img src="./image/red_spatula.jpg" width="300" height="100"><br>
+      <span id="items">Red Spatula</span>
+      <br>
+      <br>
+      <input type="radio" name="item1" value="yes"><span id="price">$7.99</span>
+      <br>
+      <br>
+      <br>
+
+      <img src="./image/blue_spatula.jpg" width="300" height="100"><br>
+      <span id="items">Blue Spatula</span>
+      <br>
+      <br>
+      <input type="radio" name="item2" value="yes"><span id="price">$7.99</span>
+      <br>
+      <br>
+      <img src="./image/purple_spatula.jpg" width="300" height="100"><br>
+      <span id="items">Purple Spatula</span>
+      <br>
+      <br>
+      <input type="radio" name="item1" value="yes"><span id="price">$7.99</span>
+      <br>
+      <br>
+      <span id="items">Please choose the shipping</span>
+      <br>
+      <input type="radio" name="shipping" value="overnight"><span id="price">Overnight $50</span>
+      <br>
+      <input type="radio" name="shipping" value="three"><span id="price">Three Day $5</span>
+      <br>
+      <input type="radio" name="shipping" value="free"><span id="price">Free 7 Day</span>
+      <br>
+      <br>
+      <input type="submit" name="reset" value="Reset">
+      <input type="submit" name="submit" value="Submit Order">
+    </form>
+  </body>
+</html>
