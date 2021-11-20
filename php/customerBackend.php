@@ -41,12 +41,12 @@ echo '<span id="recipt">----------</span><br>';
 echo '<span id="recipt">SUBTOTOAL: $'.round($subtotal,2).'</span><br>';
 echo '<span id="recipt">----------</span><br>';
 
-if ($ship == "free") {
-  echo '<span id="recipt">Shipping: Overnight = $50</span><br>';
-} elseif ("three") {
-  echo '<span id="recipt">Shipping: Three Day = $5</span><br>';
+if ($ship == "overnight") {
+  echo '<span id="recipt">Overnight Shipping = $50</span><br>';
+} elseif ($ship == "three") {
+  echo '<span id="recipt">Three Day Shipping = $5</span><br>';
 } else {
-  echo '<span id="Recipt">Shipping: Free 7 Day = $0</span><br>';
+  echo '<span id="Recipt">Free 7 Day Shipping = $0</span><br>';
 }
 echo '<span id="recipt">----------</span><br>';
 
@@ -55,25 +55,4 @@ echo '<span id="recipt">TOTAL: $'.round($total,2).'</span><br><br><br>';
 echo '<span id="footer">THANK YOU FOR YOUR PURCHASE!!</span><br>';
 echo "</body>";
 echo "</html>";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  ?>
