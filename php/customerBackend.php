@@ -6,24 +6,14 @@ ini_set("display_errors", 1);
 $user = $_POST["user"];
 $u_pass = $_POST["password"];
 $item_1 = $_POST["item1"];
-$item1_total = $item_1 * 7.99;
 $item_2 = $_POST["item2"];
-$item2_total = $item_2 * 7.89;
 $item_3 = $_POST["item3"];
-$item3_total = $item_3 * 6.99;
 $ship = $_POST["shipping"];
 $total;
-
+$item1_total = $item_1 * 7.99;
+$item2_total = $item_2 * 7.89;
+$item3_total = $item_3 * 6.99;
 $subtotal = $item1_total + $item2_total + $item3_total;
-// if ($item_1 == "yes") {
-//   $subtotal += 7.99;
-// }
-// if ($item_2 == "yes"){
-//   $subtotal++;
-// }
-// if ($item_3 == "yes"){
-//   $subtotal++;
-// }
 if ($ship == "overnight") {
   $total = $subtotal + 50;
 } elseif ($ship == "three") {
@@ -60,7 +50,7 @@ if ($ship == "free") {
 }
 echo '<span id="recipt">----------</span><br>';
 
-echo '<span id="total">TOTAL: $'.round($total,2).'</span><br><br><br>';
+echo '<span id="recipt">TOTAL: $'.round($total,2).'</span><br><br><br>';
 
 echo '<span id="footer">THANK YOU FOR YOUR PURCHASE!!</span><br>';
 echo "</body>";
