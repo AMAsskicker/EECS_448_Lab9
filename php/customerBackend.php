@@ -47,8 +47,8 @@ echo '<span id="recipt">Black Spatula x '.$item_5.' =  '.$item5_total.'</span><b
 echo '<span id="recipt">----------</span><br>';
 echo '<span id="recipt">SUBTOTOAL: $'.round($subtotal,2).'</span><br>';
 echo '<span id="recipt">----------</span><br>';
-echo '<span id="recipt">Tax: '.$subtotal' x 8% = '.$tax_total.'</span><br>';
-echo '<span id="recipt">SUBTOTOAL: $'.round(($tax_total),2).'</span><br>';
+echo '<span id="recipt">Tax: $'.round($subtotal).' x 8% = $'.round($subtotal * 0.08, 2).'</span><br>';
+echo '<span id="recipt">SUBTOTOAL: $'.round($tax_total,2).'</span><br>';
 echo '<span id="recipt">----------</span><br>';
 if ($ship == "overnight") {
   echo '<span id="recipt">Overnight Shipping = $50</span><br>';
