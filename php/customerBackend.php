@@ -31,7 +31,7 @@ echo "<head>";
 echo '<link rel="stylesheet" href="../css/master.css">';
 echo '<link rel="stylesheet" href="../css/storeFront.css">';
 echo "</head>";
-echo "<body>";
+echo '<body id="multi_body">';
 
 echo '<span id="user_pass">User Name: ' . $user . '</span><br>';
 echo '<span id="user_pass">Password: ' . $u_pass . '</span><br><br>';

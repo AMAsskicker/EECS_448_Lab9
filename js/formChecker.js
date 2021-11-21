@@ -9,17 +9,21 @@ function validateForm() {
   let item_1 = document.forms["order_form"]["item1"].value;
   let item_2 = document.forms["order_form"]["item2"].value;
   let item_3 = document.forms["order_form"]["item3"].value;
+  let item_4 = document.forms["order_form"]["item4"].value;
+  let item_5 = document.forms["order_form"]["item5"].value;
   let ship_rad = document.getElementsByName("shipping");
-
+  //check password
   if (form_pass == "") {
     alert("PASSWORD must be filled out");
     return false;
   }
+  // check email
   if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form_email)))
     {
       alert("You have entered an invalid email address!");
       return (false);
   }
+  // check items is num, not empty and in range
   if (isNaN(item_1) || item_1 == "") {
     alert("Must enter a valid quantity for red spatula");
     return false;
@@ -41,6 +45,21 @@ function validateForm() {
     alert("Must enter a valid quantity for purple spatula");
     return false;
   }
+  if (isNaN(item_4) || item_4 == "") {
+    alert("Must enter a quantity for white spatula");
+    return false;
+  } else if (item_4 < 0 || item_4 > 9) {
+    alert("Must enter a valid quantity for purple spatula");
+    return false;
+  }
+  if (isNaN(item_5) || item_5 == "") {
+    alert("Must enter a quantity for black spatula");
+    return false;
+  } else if (item_5 < 0 || item_5 > 9) {
+    alert("Must enter a valid quantity for purple spatula");
+    return false;
+  }
+  // check shipping is chosen
   if (!(ship_rad[0].checked || ship_rad[1].checked || ship_rad[2].checked)) {
       alert("Please select the shipping ");
       return false;
