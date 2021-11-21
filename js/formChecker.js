@@ -49,14 +49,14 @@ function validateForm() {
     alert("Must enter a quantity for white spatula");
     return false;
   } else if (item_4 < 0 || item_4 > 9) {
-    alert("Must enter a valid quantity for purple spatula");
+    alert("Must enter a valid quantity for white spatula");
     return false;
   }
   if (isNaN(item_5) || item_5 == "") {
     alert("Must enter a quantity for black spatula");
     return false;
   } else if (item_5 < 0 || item_5 > 9) {
-    alert("Must enter a valid quantity for purple spatula");
+    alert("Must enter a valid quantity for white spatula");
     return false;
   }
   // check shipping is chosen

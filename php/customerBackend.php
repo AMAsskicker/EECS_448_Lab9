@@ -18,12 +18,13 @@ $item3_total = $item_3 * 6.99;
 $item4_total = $item_4 * 8.99;
 $item5_total = $item_5 * 5.99;
 $subtotal = $item1_total + $item2_total + $item3_total + $item4_total + $item5_total;
+$tax_total = $subtotal * 1.08;
 if ($ship == "overnight") {
-  $total = $subtotal + 50;
+  $total = $tax_total + 50;
 } elseif ($ship == "three") {
-  $total = $subtotal + 5;
+  $total = $tax_total + 5;
 } else {
-  $total = $subtotal;
+  $total = $tax_total;
 }
 
 echo "<html>";
@@ -46,7 +47,9 @@ echo '<span id="recipt">Black Spatula x '.$item_5.' =  '.$item5_total.'</span><b
 echo '<span id="recipt">----------</span><br>';
 echo '<span id="recipt">SUBTOTOAL: $'.round($subtotal,2).'</span><br>';
 echo '<span id="recipt">----------</span><br>';
-
+echo '<span id="recipt">Tax: '.$subtotal' x 8% = '.$tax_total.'</span><br>';
+echo '<span id="recipt">SUBTOTOAL: $'.round(($tax_total),2).'</span><br>';
+echo '<span id="recipt">----------</span><br>';
 if ($ship == "overnight") {
   echo '<span id="recipt">Overnight Shipping = $50</span><br>';
 } elseif ($ship == "three") {
